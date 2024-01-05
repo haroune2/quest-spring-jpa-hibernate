@@ -1,9 +1,17 @@
 package com.wildcodeschool.wildandwizard.entity;
 
-// TODO : update this entity
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+
+//La classe School contient bien tout le code nécessaire afin d'en faire une entité.
+
+@Entity
 public class School {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private Long capacity;
@@ -11,6 +19,7 @@ public class School {
 
     public School() {
     }
+
 
     public Long getId() {
         return id;
